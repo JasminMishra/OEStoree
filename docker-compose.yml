@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+
+
+    elecronicstore:
+        build: OnlineElectronicStore
+        ports:
+        - 8888:8888
+
+
+
+    postgres:
+        image: postgres:14.5
+        ports:
+        - 5432:5432
+
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: pgadmin
+            POSTGRES_DB: electronicdb
